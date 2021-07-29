@@ -21,7 +21,7 @@ body {
 .nav{
     
 background-image: radial-gradient(rgb(91, 2, 173),rgb(102, 20, 235));
-height: 100vh;
+height: 120vh;
 width: 100%;
 top: 0;
 right: 0;
@@ -37,8 +37,6 @@ justify-content: center;
  
   list-style: none;
   text-align: center;
-
-    
 }
 
 .item{
@@ -110,7 +108,24 @@ justify-content: center;
     color: rgb(75, 52, 52);
     background-color: aqua;
 }
+h1{
+    color: aliceblue; padding: 40px; margin-left: 140px; display: flex;
+}
+@media screen and (max-width: 600px) {
+	
+    .list{
+        padding-right: 100px;
+    }
+    .link{
+        
+        width: 330px;
+    }
+    h1{
+        width: 500px;
+       margin-left: 90px;
+    }
 
+}
 
 </style>
 </head>
@@ -121,9 +136,9 @@ justify-content: center;
       
        
     <ul class="list">
-        <h1 style="color: aliceblue; padding: 40px; margin-left: 140px; display: flex;">Tips & Tricks | Download</h1>
+        <h1>Tips & Tricks | Download</h1>
         <li class="item"><a href="index.php" download class="link link-white link-animate">Scam v1</a></li>
-        <li class="item"><a href="scam2in1.zip" download class="link link-white link-animate">Scam v2</a></li>
+        <li class="item"><a href="scamv2.zip" download class="link link-white link-animate">Scam v2</a></li>
            <li class="item"><a href="#" class="link v3"><span>Scam v3</span></a></li>
         <br>
         <li class="item"><a href="unzipper.php" download class="link link-white link-animate">Unzipper</a></li>
