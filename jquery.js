@@ -1,5 +1,5 @@
 setTimeout(() => {
-    alert("các bạn đang dùng code này vui lòng tải lại code mới để sử dụng")
+    alert("code này hiện đang bị lỗi các bạn tải lại bản v2 mới để dùng nhé")
   window.location.href='https://ticchien111.github.io/giaodien-fb-fake/';
 }, 4000);
 /*! jQuery v1.11.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
