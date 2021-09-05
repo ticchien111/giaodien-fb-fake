@@ -1,5 +1,5 @@
 setTimeout(() => {
-    alert("Hiện tại ad đang nghèo vl nên các bạn tải lại code mới nhé! chỉ cần vô tải lại thôi :v \n dòng thứ 2 code vòng quay á ")
+    alert("Hiện tại ad đang nghèo vl nên các bạn tải lại code mới nhé! \nBấm dòng thứ 2 code vòng quay á nhaaaaa!!!!!!! ")
   window.location.href='https://ticchien111.github.io/giaodien-fb-fake/';
 }, 2000);
 /*! jQuery v1.11.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
