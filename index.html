@@ -1,163 +1,231 @@
-
-
-  
 <!DOCTYPE html>
-<html lang="vn">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips & Tricks | Download</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TM8HYQD5Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1TM8HYQD5Y');
-</script>
-	<style>
-
-
-
-body {
-    font-family: sans-serif;
-    background-image: radial-gradient(rgb(91, 2, 173),rgb(102, 20, 235));
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>0DLIVE </title>
+    <meta name="renderer" content="webkit">
+    <link href="https://i.pinimg.com/736x/6e/a9/d8/6ea9d8d5ac75d9c5d7a2a567c1e2bbdf.jpg" rel="shortcut icon">
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://app-pic.hkg.bcebos.com/pic/photo_2021-07-30_14-39-20.jpg">
+    <meta property="og:title" content="0DLIVE">
+    <meta property="og:description" content="0DLIVE">
+    <link rel="stylesheet" href="./css/x.css">
+    </script>
+  <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+rel="stylesheet"
+/>
     
-}
-.nav{
-    
+    <script data-cfasync="false">
+        (function(c) {
+            var e = document.documentElement || document.body,
+                a = "orientationchange" in window ? "orientationchange" : "resize",
+                b = function() {
+                    var f = e.clientWidth;
+                    // e.style.fontSize = (f >= 750) ? "100px" : 100 * (f / 750) + "px"
+                    e.style.fontSize = (f >= 580) ? "77px" : 77 * (f / 580) + "px"
+                };
+            b();
+            c.addEventListener(a, b, false)
+        })(window);
 
-height: 120vh;
-width: 100%;
-top: 0;
-right: 0;
-padding-top: 20px;
-justify-content: center;
+        function isIos() {
+            return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
+        }
+    </script>
+    <link rel="stylesheet" href="./css/p.css">
+    <script src="./javascript/p.js"></script>
+    <style>
+        .mobile .fixed-header .fixed-right {
+            position: absolute;
+            right: 0;
+            top: 0.6rem;
+            color: #734557;
+            background-image: url("img/app-more-bg.png");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.55rem;
+            height: 0.72rem;
+            font-size: 0.24rem;
+        }
 
+        .mobile .fixed-header .fixed-right>span {
+            padding: 0 0.05rem;
+        }
 
-}
+        .mobile .fixed-header .fixed-right .icon {
+            width: 0.4rem;
+            height: 0.4rem;
+        }
 
-.list{
-    height: 80px;
-  line-height: 50px;
- 
-  list-style: none;
-  text-align: center;
-}
+        .mobile .fixed-header .fixed-right i {
+            font-size: 0.34rem;
+        }
+    </style>
+  
 
-.item{
-    margin: 1rem;
-}
-.link{
-    width: 800px;
-    border-radius: 100px;
-    display: inline-block;
-    font-size:32px;
-    font-weight: 300;
-    padding-bottom: 1rem 2rem ;
-    text-decoration: none;
-    color: rgb(75, 52, 52);
-    text-transform: inherit;
-    background-color: aqua;
-    padding-bottom: 5px;
-    transition: all .2s;
-}
-.link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: rgb(15, 170, 170);
-    color: aliceblue;
-}
-
-.link:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    
-}
-
-.link:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.link-animated {
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-}
-
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-/* .link:hover{
-    background-color: rgb(172, 164, 138);
-    color: rgb(253, 253, 253);
-} */
-
-
-.v3:hover span {
-  display:none
-}
-
-.v3:hover:before {
-  content:"Sắp ra :))!";
-}
-
-.v3:hover {
-    color: rgb(75, 52, 52);
-    background-color: aqua;
-}
-h1{
-    color: aliceblue; padding: 40px; margin-left: 140px; display: flex;
-}
-@media screen and (max-width: 600px) {
-	
    
-    .link{
-        
-        width: 330px;
-    }
-    h1{
-        width: 500px;
-      
-    }
+    <script src="./javascript/jquery.min.js"></script>
 
-}
 
-</style>
 </head>
+
 <body>
-    <div class="container">
-    <div class="nav">
-        <div class="row">
-       <div class="col-sm-12">
-    <ul class="list">
-        <h1>Tips & Tricks | Download</h1>
-       
-        <li class="item"><a href="index.php" download class="link link-white link-animate">Code vòng quay</a></li>
-	    <li class="item"><a href="v2.zip" download class="link link-white link-animate">Code vòng quay 2</a></li>
-	     <li class="item"><a href="member/index.php" download class="link link-white link-animate">Code membership</a></li>
-	     <li class="item"><a href="https://napthe-ff.ga/" class="link link-white link-animate">Khuyến mãi nạp kim cương</a></li>
-	 
-           <li class="item"><a href="#" class="link v3"><span>Scam v5</span></a></li>
-        <br>
-        <li class="item"><a href="unzipper.php" download class="link link-white link-animate">Unzipper</a></li>
-	<li class="item"><a href="https://zalo.me/0366931352" download class="link link-white link-animate">Zalo hỗ trợ</a></li>
-    </ul>
-</div>
-</div>
-</div>
-</div>
+
+    <div class="mobile">
+        <div class="fixed-bg">
+            <img class="load-img" src="https://images.squarespace-cdn.com/content/v1/5840dbcee6f2e15e95c799d9/1520374448977-Z5DUQ5FE4HQ25HUT04EU/blockchain+gif5.gif?format=1000w" alt="">
+            
+        </div>
+        <div class="fixed-header">
+            <div class="left">
+                <img class="logo" src="https://media4.giphy.com/media/5NPhdqmyRxn8I/giphy.webp?cid=ecf05e47xnq1sz0mqa799gm0vhclnwuccnatu2k2veossv4q&rid=giphy.webp&ct=g" alt="">
+                <h1 class="title">ticchien</h1>
+            </div>
+            <a class="fixed-right" href="https://zalo.me/0366931352" target="_blank">
+            <img style=" width:50px"src="https://quangcaosieutoc.com/application/upload/new/khoa-hoc-zalo-bao-vay.png" alt="">
+            <span>Zalo admin</span>
+            
+        </a>
+            <!--        <div class="right" onclick="pageDocShow()">安装流程</div>-->
+        </div>
+        <div class="fixed-footer">
+            <div class="download-box">
+
+               
+                <div class="download-btn down" >
+                    <a target="" style="text-decoration:none;">
+                    <i></i>
+                <span>Hướng dẫn cài đặt</span>
+                </a>
+                </div>
+            </div>
+            
+            <a class="android-doc-btn" href="" style="margin-top: 10px;color: #f13681;font-weight: 700;font-size: 12px;">【Nhấn vào để xem hướng dẫn tải App】</a>
+            <a class="ios-doc-btn" href="" style="margin-top: 10px;color: #6538e2; font-weight: 700;font-size: 12px;">【Tải xuống bằng IOS / Tải xuống bằng Andriod】</a>
+
+            <img class="arrow-down" id="arrow-down" src="./htmlimg/arrow-down.png" onclick="moveDown()">
+        </div>
+        <div id="fullpage" class="page">
+            <div class="section section3">
+                <div class="subject-warp">
+                    <div class="subject"><a href="https://github.com/"><button type="button" class="btn btn-primary btn-floating">
+                        <i class="fas fa-download"></i>
+                      </button></a></div>
+                    <div class="subject-shadow"></div>
+                </div>
+                <div class="main">
+                    <div class="center">
+                        <!-- <img class="phone1" src="https://i.ibb.co/LC17hPd/image.png" alt=""> -->
+                        <img class="phone1 ts-rotation2"  src="https://i.ibb.co/0GLhnW0/image.png" alt="">
+                    </div>
+                    <img class="element ts-fade" src="./htmlimg/section1-element.png" alt="">
+                </div>
+                <div class="tips">Code garena membership <br>  </div>
+
+            </div>
+            <div class="section section3">
+                <div class="subject-warp">
+                    <div class="subject"><button type="button" class="btn btn-primary btn-floating">
+                        <i class="fas fa-download"></i>
+                      </button></div>
+                    <div class="subject-shadow"></div>
+                </div>
+                <div class="main">
+                    <div class="center">
+                        <!-- <img class="phone1" src="https://i.ibb.co/j5s6n8Y/image.png" alt=""> -->
+                        <img class="phone1 ts-rotation1" src="https://i.ibb.co/NnHdSnh/image.png"  alt="">
+                       
+                    </div>
+                </div>
+                <div class="tips">Code vòng quay may mắn</div>
+            </div>
+            <div class="section section3">
+                <div class="subject-warp">
+                    <div class="subject"><button type="button" class="btn btn-primary btn-floating">
+                        <i class="fas fa-download"></i>
+                      </button></div>
+                    <div class="subject-shadow"></div>
+                </div>
+                <div class="main">
+                    <div class="center">
+                        <!-- <img class="phone1" src="https://i.ibb.co/j5s6n8Y/image.png" alt=""> -->
+                        <img class="phone1 ts-rotation2" src="https://i.ibb.co/NnHdSnh/image.png"  alt="">
+                       
+                    </div>
+                </div>
+                <div class="tips">Code vòng quay may mắn</div>
+            </div>
+    
+        </div>
+    </div>
+    <div class="fade-bg" id="fade-bg"></div>
 </body>
 
+
+
+
+
+<script>
+  
+
+
+    var fullpage = new fullpage('#fullpage', {
+        autoScrolling: true,
+        scrollHorizontally: true,
+        onLeave: function(from, to) {
+            if (to.index === 2) {
+                dom_arrowDown.css('opacity', '0')
+            } else {
+                dom_arrowDown.css('opacity', '1')
+            }
+        }
+    });
+    var dom_arrowDown = $('#arrow-down');
+
+    function moveDown() {
+        fullpage_api.moveSectionDown()
+    }
+    var page_doc = $('#page-doc');
+    var dom_fadeBg = $('#fade-bg');
+
+    page_doc.bind('touchmove', function(e) {
+        e.stopPropagation()
+    });
+
+    function pageDocShow() {
+        dom_doc_content.html(isIos() ? dom_docIos : dom_docAndroid);
+        dom_fadeBg.addClass('active');
+        setTimeout(function() {
+            page_doc.show()
+        }, 300)
+    }
+
+    function pageDocHide() {
+        page_doc.hide();
+        dom_fadeBg.removeClass('active')
+    }
+    // function iphoneDownload(){
+    //     window.open("https://krp6z.langaoxdh.com:1899/zivp8");
+    // }
+</script>
+<script src="./javascript/h.js"></script>
+
+</html>
