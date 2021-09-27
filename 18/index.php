@@ -262,7 +262,7 @@ div#garena {
                         cursor: pointer;
                     }
                     #bonus img{
-                        width: 50%;
+                        width: 35%;
                     }
                     #bonus_login{
                         display:block;
