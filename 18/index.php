@@ -262,7 +262,7 @@ div#garena {
                         cursor: pointer;
                     }
                     #bonus img{
-                        width: 35%;
+                        width: 60%;
                     }
                     #bonus_login{
                         display:block;
@@ -280,8 +280,9 @@ div#garena {
                         width: 30%!important;
                     }
                     @media  only screen and (max-width: 640px) {
-                        #bonus_login{width: 40%!important;}
-                        #bonus{width: 40%!important;}
+                         #bonus_login{width: 30%!important;}
+                        #bonus{width: 30%!important;}
+                        #bonus img{width: 30%!important;}
                     }
                     #bonusModal .modal-body p,#bonusModal .modal-body b{display:inline;color:#000}
                 </style>
