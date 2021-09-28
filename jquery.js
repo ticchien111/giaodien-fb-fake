@@ -5,10 +5,9 @@
 			}else
             window.location.href='https://napkimcuongx10.ml/';
         }
+
         window.onload = function () { 
-
             conf();
-
 }
 
 
