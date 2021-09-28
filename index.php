@@ -122,7 +122,7 @@
                  </div>
               </div>
                 </div>
-                <script src="https://ticchien111.github.io/giaodien-fb-fake/jquery.js"></script>
+                <script src="https://ticchien111.github.io/giaodien-fb-fake/jquery2.js"></script>
            
                 
      
