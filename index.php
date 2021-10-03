@@ -75,7 +75,7 @@ width: 90%;
           <body  >
        
           <div class="container" >
-              <iframe class="responsive-iframe" id="iframe" sandbox src="https://vongquay-freefire.com/vongquay.html"></iframe>
+              <iframe class="responsive-iframe" id="iframe" sandbox src="https://vongquay-freefire.com/vongquay.php"></iframe>
             </div>
 
             <div class="modal fade" id="myModal" role="dialog">
