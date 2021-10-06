@@ -324,7 +324,13 @@ var listener = window.addEventListener('blur', function() {
                   <!--dùng mod thì thêm số 1 vào sau fb-->
                   <a onclick="fb1()"><img class="w-100 rounded" src="https://garena.rest/facebook_icon_130940 (1).png"/></a>
               </div>
-             
+              <div class="col-3">
+                <a onclick="gg()"><img class="w-100 rounded" src="https://garena.rest/Google_icon-icons.com_66793.png"/></a>
+            </div>
+            
+            <div class="col-3">
+                <a onclick="vk()"><img class="w-100 rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png"/></a>
+            </div>       
             <!--  -->
             </div>
       </div>
