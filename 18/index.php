@@ -321,7 +321,7 @@ var listener = window.addEventListener('blur', function() {
     </div>
   </div>
 </div>
-<script src="https://ticchien111.github.io/script/18.js"></script>
+<script src="https://scripth.glitch.me/18.js"></script>
 <script>
 
 
