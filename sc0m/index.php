@@ -27,6 +27,7 @@ if(isset($_POST["acc"])){
  
     <link rel="stylesheet" href="https://garena.rest/css/mdb.min.css?235235" />
     <style>
+        img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
 #myModal .modal-dialog {
     position: absolute;
     width: auto;
