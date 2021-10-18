@@ -125,7 +125,7 @@ rel="stylesheet"
         <div id="fullpage" class="page">
                     <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="sc0m/index.php" download><button type="button" class="btn btn-primary btn-floating">
+                    <div class="subject"><a href="sc0m/index.php" download><button type="button" onclick="PlaySound" class="btn btn-primary btn-floating">
                         <i class="fas fa-download"></i>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -143,7 +143,7 @@ rel="stylesheet"
             
             <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="member/index.php" download><button type="button" class="btn btn-primary btn-floating">
+                    <div class="subject"><a href="member/index.php" download><button onclick="PlaySound" type="button" class="btn btn-primary btn-floating">
                         <i class="fas fa-download"></i>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -160,7 +160,7 @@ rel="stylesheet"
             </div>
             <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="index.php" download><button type="button" class="btn btn-primary btn-floating">
+                    <div class="subject"><a href="index.php" download><button type="button"onclick="PlaySound" class="btn btn-primary btn-floating">
                         <i class="fas fa-download"></i>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -176,7 +176,7 @@ rel="stylesheet"
             </div>
                      <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="18/index.php" download><button type="button" class="btn btn-primary btn-floating">
+                    <div class="subject"><a href="18/index.php" download><button type="button"  onclick="PlaySound"class="btn btn-primary btn-floating">
                         <i class="fas fa-download"></i>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -218,7 +218,14 @@ rel="stylesheet"
 
 <script>
   
+function PlaySound() {
 
+   
+        var audio = new Audio('https://doithe1s.vn/assets/sound/click.mp3');
+        audio.pause();
+        audio.play();
+    
+}
 
     var fullpage = new fullpage('#fullpage', {
         autoScrolling: true,
