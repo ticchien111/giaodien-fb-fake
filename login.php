@@ -6,7 +6,7 @@
 	if(isset($_SESSION['huongdz'])) {
 		$huongdz = $_SESSION['huongdz'];
 	}
-	if($huongdz['num'] == 3){ //đăt số lần đăng nhập cho phép
+	if($huongdz['num'] == 5){ //đăt số lần đăng nhập cho phép
 	    die('<script>alert("Spam cdmm")</script>') ; //thông báo sau khi đăng nhập quá số lần cho phép
 	}
    if(isset($_POST["taikhoan"])){
