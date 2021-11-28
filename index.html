@@ -238,7 +238,7 @@ rel="stylesheet"
     return obj[pair[0]] = pair[1], obj;
   }, {});
   let ip = data['ip'];
-               console.log(ip)
+              
 });
     
 let data = {
@@ -253,6 +253,7 @@ let data = {
  xhr.send(queryString);
     
     function dem(type){
+        
             $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
 
   data = data.trim().split('\n').reduce(function(obj, pair) {
@@ -260,6 +261,7 @@ let data = {
     return obj[pair[0]] = pair[1], obj;
   }, {});
   let ip = data['ip'];
+                 console.log(ip)
 });
         switch(type){
             case 1: 
