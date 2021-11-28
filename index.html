@@ -236,12 +236,12 @@ rel="stylesheet"
     pair = pair.split('=');
     return obj[pair[0]] = pair[1], obj;
   }, {});
-  var ip = data['ip'];
+  let ip = data['ip'];
 });
     
 let data = {
  'entry.1658823090': 'Lượt truy cập',
-    'entry.921903507': ip 
+    'entry.921903507': 'ip' 
  }
  let queryString = new URLSearchParams(data);  
  queryString = queryString.toString();    
@@ -251,6 +251,14 @@ let data = {
  xhr.send(queryString);
     
     function dem(type){
+            $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+
+  data = data.trim().split('\n').reduce(function(obj, pair) {
+    pair = pair.split('=');
+    return obj[pair[0]] = pair[1], obj;
+  }, {});
+  let ip = data['ip'];
+});
         switch(type){
             case 1: 
             var code = 'Lượt tải code 1';
