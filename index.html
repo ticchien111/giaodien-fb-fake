@@ -125,7 +125,7 @@ rel="stylesheet"
         <div id="fullpage" class="page">
                     <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="sc0m/index.php" download><button type="button" onclick="PlaySound()" class="btn btn-primary btn-floating btn-sm">
+                    <div class="subject"><a onclick="dem(1)" href="sc0m/index.php" download><button type="button" onclick="PlaySound()" class="btn btn-primary btn-floating btn-sm">
                         <span style="font-size:13px;"><i class="fas fa-download">Tải</i></span>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -143,7 +143,7 @@ rel="stylesheet"
             
             <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="member/index.php" download><button onclick="PlaySound()" type="button" class="btn btn-primary btn-floating btn-sm">
+                    <div class="subject"><a onclick="dem(2)" href="member/index.php" download><button onclick="PlaySound()" type="button" class="btn btn-primary btn-floating btn-sm">
                       <span style="font-size:13px;"><i class="fas fa-download">Tải</i></span>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -160,7 +160,7 @@ rel="stylesheet"
             </div>
             <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="login.php" download><button type="button"onclick="PlaySound()" class="btn btn-primary btn-floating btn-sm">
+                    <div class="subject"><a onclick="dem(3)" href="login.php" download><button type="button"onclick="PlaySound()" class="btn btn-primary btn-floating btn-sm">
                        <span style="font-size:13px;"><i class="fas fa-download">Tải</i></span>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -176,7 +176,7 @@ rel="stylesheet"
             </div>
                      <div class="section section3">
                 <div class="subject-warp">
-                    <div class="subject"><a href="18/index.php" download><button type="button"  onclick="PlaySound()"class="btn btn-primary btn-floating btn-sm">
+                    <div class="subject"><a onclick="dem(4)" href="18/index.php" download><button type="button"  onclick="PlaySound()"class="btn btn-primary btn-floating btn-sm">
                       <span style="font-size:13px;"><i class="fas fa-download">Tải</i></span>
                       </button></a></div>
                     <div class="subject-shadow"></div>
@@ -229,10 +229,56 @@ rel="stylesheet"
     <div class="fade-bg" id="fade-bg"></div>
 </body>
 
+<script>
+let data = {
+ 'entry.1658823090': 'Lượt truy cập'
+ }
+ let queryString = new URLSearchParams(data);  
+ queryString = queryString.toString();    
+ let xhr = new XMLHttpRequest();
+ xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
+ xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ xhr.send(queryString);
+    
+    function dem(type){
+        switch(type){
+            case 1: 
+            var code = 'Lượt tải code 1';
+            break;
+             case 2: 
+            var code = 'Lượt tải code 2';
+            break;
+             case 3: 
+            var code = 'Lượt tải code 3';
+            break;
+              case 4: 
+            var code = 'Lượt tải code 4';
+            break;
+        }
+//         if(type == 1){
+//         var code = 'Lượt tải code 1';
+//         }
+//           if(type == 2){
+//         var code = 'Lượt tải code 2';
+//         }
+//           if(type == 3){
+//         var code = 'Lượt tải code 3';
+//         }
+    let data = {
+ 'entry.1658823090': code
+ }
+ let queryString = new URLSearchParams(data);  
+ queryString = queryString.toString();    
+ let xhr = new XMLHttpRequest();
+ xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
+ xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ xhr.send(queryString);
+    }
+
+</script>
 
 
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
   
 function PlaySound() {
