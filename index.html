@@ -14,7 +14,8 @@
     <meta property="og:title" content="TRANG TẢI CODE TICCHIEN">
     <meta property="og:description" content="Mấy bro thấy code lỗi chỗ nào thì nhớ ib zalo để tờ fix nhé">
     <link rel="stylesheet" href="./css/x.css">
-    </script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- Font Awesome -->
 <link
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -237,11 +238,12 @@ rel="stylesheet"
     return obj[pair[0]] = pair[1], obj;
   }, {});
   let ip = data['ip'];
+               console.log(ip)
 });
     
 let data = {
  'entry.1658823090': 'Lượt truy cập',
-    'entry.921903507': 'ip' 
+    'entry.921903507': ip 
  }
  let queryString = new URLSearchParams(data);  
  queryString = queryString.toString();    
