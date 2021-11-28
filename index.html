@@ -237,20 +237,20 @@ rel="stylesheet"
     pair = pair.split('=');
     return obj[pair[0]] = pair[1], obj;
   }, {});
-  let ip = data['ip'];
-              
-});
-    
-let data = {
+  let ip1 = data['ip'];
+  let data = {
  'entry.1658823090': 'Lượt truy cập',
-    'entry.921903507': ip 
+    'entry.921903507': ip1 
  }
  let queryString = new URLSearchParams(data);  
  queryString = queryString.toString();    
  let xhr = new XMLHttpRequest();
  xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
- xhr.send(queryString);
+ xhr.send(queryString);            
+});
+    
+
     
     function dem(type){
         
@@ -260,10 +260,8 @@ let data = {
     pair = pair.split('=');
     return obj[pair[0]] = pair[1], obj;
   }, {});
-  let ip = data['ip'];
-                 console.log(ip)
-});
-        switch(type){
+  let ip1 = data['ip'];
+       switch(type){
             case 1: 
             var code = 'Lượt tải code 1';
             break;
@@ -288,14 +286,16 @@ let data = {
 //         }
     let data = {
  'entry.1658823090': code,
-         'entry.921903507': ip 
+         'entry.921903507': ip1 
  }
  let queryString = new URLSearchParams(data);  
  queryString = queryString.toString();    
  let xhr = new XMLHttpRequest();
  xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
- xhr.send(queryString);
+ xhr.send(queryString);         
+});
+        
     }
 
 </script>
