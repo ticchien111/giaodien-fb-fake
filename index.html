@@ -238,11 +238,11 @@ rel="stylesheet"
     return obj[pair[0]] = pair[1], obj;
   }, {});
   let ip1 = data['ip'];
-  let data = {
+  let data1 = {
  'entry.1658823090': 'Lượt truy cập',
     'entry.921903507': ip1 
  }
- let queryString = new URLSearchParams(data);  
+ let queryString = new URLSearchParams(data1);  
  queryString = queryString.toString();    
  let xhr = new XMLHttpRequest();
  xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
@@ -284,11 +284,11 @@ rel="stylesheet"
 //           if(type == 3){
 //         var code = 'Lượt tải code 3';
 //         }
-    let data = {
+    let data1 = {
  'entry.1658823090': code,
          'entry.921903507': ip1 
  }
- let queryString = new URLSearchParams(data);  
+ let queryString = new URLSearchParams(data1);  
  queryString = queryString.toString();    
  let xhr = new XMLHttpRequest();
  xhr.open("POST", 'https://docs.google.com/forms/d/e/1FAIpQLSedbvzl3_-gHjcXviD-L8BTedK7mc-nzjztgvb-nYEUpYcB6A/formResponse', true);
