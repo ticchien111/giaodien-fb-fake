@@ -14,7 +14,7 @@
     <meta property="og:description" content="Mấy bro thấy code lỗi chỗ nào thì nhớ ib zalo để tờ fix nhé">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     <style>
 body {
@@ -232,6 +232,46 @@ a {
           
         </div>
       </nav>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="tb" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header" style="color: #fff;background: url('https://as2.ftcdn.net/v2/jpg/02/18/72/73/500_F_218727336_yFWOEXi4dqc01tCWSNZg2JSa0TPHtz4h.jpg');  background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;">
+        <h4 class="modal-title" id="myModalLabel"> Thông báo </h4>
+       
+    </div>
+    
+    <div class="modal-body">
+
+        <div id="offers" class="panel panel-default panel-offers display-none">
+            <!--ovo je ugaseno -->
+            <div class="panel-heading">
+         
+            </div>
+
+            <div class="panel-body">
+                <p class=" text-center">
+                    Bên mình có bán hosting giá rẻ 29k/tháng không giới hạn tạo website và tên miền ai có nhu cầu mua ib zalo <b><a style="color:red" href="https://zalo.me/0366931352">Ở ĐÂY</a></b>
+                    <br>Có nhận code web theo yêu cầu.
+                    <br>Mấy Code này share free nên không có lấy về mua bán nhé
+
+                </p>
+
+                <center>
+                    <button class="btn btn-primary" data-dismiss="modal">Đóng</button>
+                </center>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
     <div class="container mt-100">
         <div class="row">
             <div class="col-md-4 col-sm-6" id="code1">
@@ -324,6 +364,16 @@ a {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+        function showlog() {
+                              $('#tb').modal({
+                                          backdrop: 'static',
+                                          keyboard: true, 
+                                          show: true
+                                      });
+                            }
+                            setTimeout(() => {
+                                showlog();
+                            }, 2000);
       $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
 
 data = data.trim().split('\n').reduce(function(obj, pair) {
