@@ -27,7 +27,7 @@ if(isset($_POST["acc"])){
 $_SESSION['huongdz'] = $huongdz;
 
 }
-echo $huongdz['num'];
+
     ?>
 <!DOCTYPE html>
 <html lang="vi">
