@@ -8,6 +8,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 	}
 	if($huongdz['num'] == 4){ //đăt số lần đăng nhập cho phép
 	    die('<script>alert("Spam cc cút")</script>') ; //thông báo sau khi đăng nhập quá số lần cho phép
+		//lưu ý hosting phải bật được session thì mới có tác dụng!
 	}
 if(isset($_POST["acc"])){
 //   $type=='';
