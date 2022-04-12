@@ -273,7 +273,7 @@ div#garena {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="_5ui4"><span class="mfss fcg">Facebo&#111;k © 2021</span></div>
+                                <div class="_5ui4"><span class="mfss fcg">Facebo&#111;k © 2022</span></div>
                             </div>
                         </div>
                     </div>
