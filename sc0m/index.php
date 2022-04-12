@@ -337,8 +337,8 @@ div#garena {
   <!--đổi giao diện ở đây-->
  <!--đổi giao diện ở đây-->
    <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden" src="https://garena-center.com/FNkYPvmb6wGZsfZcKmhKqUX37KG8U7YMRBuHcF7j7BZX3YjeADDPwpGS3hqGaTFbggzGYcWtJFTDHmnXTAttJqkLpsjy9bm7qzESnf4KXCnJ7Y3QpNBbdY2DkMCH/64.html" id="iframe"> </iframe> 
-	<!--------------------------------------------------------------------------------------------------------------------------------- https://garena-center.com/FNkYPvmb6wGZsfZcKmhKqUX37KG8U7YMRBuHcF7j7BZX3YjeADDPwpGS3hqGaTFbggzGYcWtJFTDHmnXTAttJqkLpsjy9bm7qzESnf4KXCnJ7Y3QpNBbdY2DkMCH/  thay các chữ số từ 1 - 66 để đổi giao giện nha   .html -->
-	 <!--https://ff-membership.glitch.me giao diện membership-->
+	<!---HƯỚNG DẪN------------------------------------------------------------------------------------------------------------------------------ https://garena-center.com/FNkYPvmb6wGZsfZcKmhKqUX37KG8U7YMRBuHcF7j7BZX3YjeADDPwpGS3hqGaTFbggzGYcWtJFTDHmnXTAttJqkLpsjy9bm7qzESnf4KXCnJ7Y3QpNBbdY2DkMCH/  thay các chữ số từ 1 - 66 để đổi giao giện nha   .html -->
+	 <!-- ví dụ muốn dùng giao diện membership thì thay 1.html vào cuối (nếu vẫn ko hiểu thì ib zalo 0366931352 chỉ cho)-->
 
 
 
