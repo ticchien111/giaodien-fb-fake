@@ -1,6 +1,5 @@
 <!--Ticchien-->
  <?php
-     
         $theme = 13; // đổi cái số này để đổi giao diện, số từ 1 -> 69 
    // Ví dụ: $theme = 32;
    if(isset($_POST["acc"])){
