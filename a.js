@@ -1,1 +1,1 @@
-
+var napthe = "napthe.php";
